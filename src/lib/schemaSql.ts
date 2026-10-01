@@ -1,4 +1,5 @@
--- ========================================================
+// Complete, battle-tested SQL script for Supabase Database & Storage for AlexStore
+export const SUPABASE_SCHEMA_SQL = `-- ========================================================
 -- ALEXSTORE - SCRIPT SQL COMPLETO PARA SUPABASE
 -- Copia y pega este script en: Supabase Dashboard -> SQL Editor -> Run
 -- ========================================================
@@ -216,3 +217,4 @@ ON CONFLICT (producto_id) DO UPDATE SET cantidad = EXCLUDED.cantidad;
 -- Sincronizar secuencias
 SELECT setval('categorias_id_seq', (SELECT MAX(id) FROM public.categorias));
 SELECT setval('productos_id_seq', (SELECT MAX(id) FROM public.productos));
+`;

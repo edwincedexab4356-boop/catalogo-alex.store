@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Modal } from './Modal';
 import { getSupabaseCredentials, saveSupabaseCredentials } from '../../lib/supabase';
-import { Database, Key, Check, Copy, ExternalLink, ShieldCheck } from 'lucide-react';
+import { SUPABASE_SCHEMA_SQL } from '../../lib/schemaSql';
+import { Database, Key, Check, Copy, ExternalLink, ShieldCheck, AlertTriangle } from 'lucide-react';
 import { useToast } from '../../contexts/ToastContext';
 
 interface SupabaseConfigModalProps {
@@ -35,14 +36,25 @@ export const SupabaseConfigModal: React.FC<SupabaseConfigModalProps> = ({ isOpen
 
   const copySqlScript = async () => {
     try {
-      const response = await fetch('/supabase-schema.sql');
-      const text = await response.text();
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(SUPABASE_SCHEMA_SQL);
       setCopiedSql(true);
-      success('Script SQL copiado al portapapeles. Pégalo en tu Supabase SQL Editor.');
+      success('¡Script SQL copiado! Pégalo en tu Supabase SQL Editor y pulsa Run.');
       setTimeout(() => setCopiedSql(false), 3000);
     } catch {
-      error('No se pudo copiar automáticamente. Puedes ver el archivo supabase-schema.sql en la raíz.');
+      // Fallback
+      try {
+        const textarea = document.createElement('textarea');
+        textarea.value = SUPABASE_SCHEMA_SQL;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        setCopiedSql(true);
+        success('¡Script SQL copiado! Pégalo en tu Supabase SQL Editor.');
+        setTimeout(() => setCopiedSql(false), 3000);
+      } catch {
+        error('Por favor copia manualmente el texto que aparece en la pestaña Tablas & Script SQL.');
+      }
     }
   };
 
@@ -77,7 +89,7 @@ export const SupabaseConfigModal: React.FC<SupabaseConfigModalProps> = ({ isOpen
                 : 'border-transparent text-stone-500 hover:text-stone-900'
             }`}
           >
-            Tablas & Script SQL
+            Tablas & Permisos SQL
           </button>
         </div>
 
@@ -99,16 +111,13 @@ export const SupabaseConfigModal: React.FC<SupabaseConfigModalProps> = ({ isOpen
                 URL del Proyecto Supabase (VITE_SUPABASE_URL)
               </label>
               <input
-                type="url"
+                type="text"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                placeholder="https://xyzabcdefghijklm.supabase.co"
+                placeholder="https://gfkzdakcekvvylzsyexi.supabase.co"
+                className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-white border border-[#eae3d5] rounded-xl focus:outline-none focus:border-[#c5a059] font-mono text-stone-900"
                 required
-                className="w-full px-4 py-2.5 rounded-xl border border-[#d6cdbd] focus:outline-none focus:border-[#c5a059] text-stone-900 text-xs sm:text-sm bg-white"
               />
-              <span className="text-[11px] text-stone-400 mt-1 block">
-                Encuéntralo en Supabase: Project Settings ➔ API ➔ Project URL
-              </span>
             </div>
 
             <div>
@@ -121,70 +130,48 @@ export const SupabaseConfigModal: React.FC<SupabaseConfigModalProps> = ({ isOpen
                 onChange={(e) => setAnonKey(e.target.value)}
                 placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
                 rows={3}
+                className="w-full px-3.5 py-2.5 text-xs bg-white border border-[#eae3d5] rounded-xl focus:outline-none focus:border-[#c5a059] font-mono text-stone-900 resize-none"
                 required
-                className="w-full px-4 py-2.5 rounded-xl border border-[#d6cdbd] focus:outline-none focus:border-[#c5a059] text-stone-900 text-xs font-mono bg-white"
               />
-              <span className="text-[11px] text-stone-400 mt-1 block">
-                Encuéntralo en Supabase: Project Settings ➔ API ➔ Project API Keys (anon / public)
-              </span>
             </div>
 
-            <div className="pt-4 flex items-center justify-end gap-3 border-t border-[#f0eae0]">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
               <button
                 type="button"
-                onClick={onClose}
-                className="px-4 py-2.5 rounded-xl text-stone-600 hover:bg-stone-100 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                onClick={() => setActiveTab('sql')}
+                className="text-xs text-[#c5a059] hover:underline font-bold"
               >
-                Cerrar
+                ¿Falta crear tablas o permisos? Ver Script SQL →
               </button>
+
               <button
                 type="submit"
-                className="px-5 py-2.5 rounded-xl bg-[#0c0a08] hover:bg-stone-800 text-[#f7e8c5] font-black text-xs uppercase tracking-wider border border-[#c5a059]/40 transition-colors shadow-xs cursor-pointer"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#0c0a08] hover:bg-stone-800 text-[#f7e8c5] border border-[#c5a059]/40 font-bold text-xs uppercase tracking-wider transition-colors shadow-xs cursor-pointer"
               >
-                Guardar y Conectar
+                Guardar Credenciales
               </button>
             </div>
           </form>
         ) : (
           <div className="space-y-4">
-            <div className="p-4 rounded-2xl bg-[#faf7f0] border border-[#ebdcc4] text-xs text-stone-800 space-y-2">
-              <p className="font-bold flex items-center gap-2 uppercase tracking-wider text-[11px]">
-                <Database className="w-4 h-4 text-[#c5a059]" />
-                Estructura de Base de Datos Necesaria
-              </p>
-              <p className="text-xs text-stone-600">
-                La aplicación utiliza las tablas <code className="bg-white px-1.5 py-0.5 rounded font-mono border border-stone-200">public.perfiles</code>,{' '}
-                <code className="bg-white px-1.5 py-0.5 rounded font-mono border border-stone-200">public.categorias</code>,{' '}
-                <code className="bg-white px-1.5 py-0.5 rounded font-mono border border-stone-200">public.productos</code>,{' '}
-                <code className="bg-white px-1.5 py-0.5 rounded font-mono border border-stone-200">public.inventario</code> y el bucket de storage{' '}
-                <code className="bg-white px-1.5 py-0.5 rounded font-mono border border-stone-200">productos</code>.
+            <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 space-y-2">
+              <div className="font-bold flex items-center gap-1.5 text-amber-950">
+                <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+                Solución a error 42501 (Permission Denied):
+              </div>
+              <p>
+                Si la consola indica <code className="bg-amber-100 px-1 py-0.5 rounded font-mono">permission denied for table productos</code>, solo necesitas copiar este script y ejecutarlo en tu consola de Supabase. Concede los permisos <code className="bg-amber-100 px-1 py-0.5 rounded font-mono">GRANT SELECT ON public.productos TO anon;</code> y configura las políticas RLS y tablas necesarias.
               </p>
             </div>
 
-            <div className="border border-[#262018] rounded-2xl p-4 bg-[#0c0a08] text-[#f1eaa7] font-mono text-xs max-h-56 overflow-y-auto">
-              <pre>
-{`-- Ejecuta esto en Supabase SQL Editor:
--- Tablas: perfiles, categorias, productos, inventario
--- Bucket storage: productos
--- Políticas RLS y función es_admin()`}
-              </pre>
-            </div>
-
-            <div className="flex items-center justify-between pt-2">
-              <a
-                href="https://supabase.com/dashboard"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#c5a059] hover:underline"
-              >
-                Abrir Supabase Dashboard
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold uppercase tracking-wider text-stone-700">
+                Script SQL Completo (AlexStore)
+              </span>
               <button
                 type="button"
                 onClick={copySqlScript}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0c0a08] text-[#f7e8c5] hover:bg-stone-800 text-xs font-bold uppercase tracking-wider border border-[#c5a059]/40 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#0c0a08] hover:bg-stone-800 text-[#f7e8c5] border border-[#c5a059]/40 font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs"
               >
                 {copiedSql ? (
                   <>
@@ -194,9 +181,37 @@ export const SupabaseConfigModal: React.FC<SupabaseConfigModalProps> = ({ isOpen
                 ) : (
                   <>
                     <Copy className="w-3.5 h-3.5 text-[#c5a059]" />
-                    Copiar Script SQL Completo
+                    Copiar Script SQL
                   </>
                 )}
+              </button>
+            </div>
+
+            <div className="relative">
+              <pre className="p-4 bg-stone-900 text-stone-200 rounded-2xl text-[11px] font-mono overflow-x-auto max-h-72 border border-stone-800 leading-relaxed">
+                {SUPABASE_SCHEMA_SQL}
+              </pre>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#faf7f0] border border-[#ebdcc4] text-xs text-stone-600 space-y-2">
+              <div className="font-bold text-stone-900 uppercase tracking-wider text-[11px]">
+                Pasos para ejecutar en Supabase:
+              </div>
+              <ol className="list-decimal pl-4 space-y-1">
+                <li>Ve a tu proyecto en <strong>supabase.com/dashboard</strong>.</li>
+                <li>En el menú lateral izquierdo, haz clic en <strong>SQL Editor</strong>.</li>
+                <li>Haz clic en <strong>New query</strong>, pega el script copiado y pulsa el botón verde <strong>Run</strong>.</li>
+                <li>¡Listo! Tus tablas, permisos para visitantes y artículos iniciales estarán activos.</li>
+              </ol>
+            </div>
+
+            <div className="flex justify-end pt-2">
+              <button
+                type="button"
+                onClick={onClose}
+                className="px-5 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+              >
+                Cerrar
               </button>
             </div>
           </div>

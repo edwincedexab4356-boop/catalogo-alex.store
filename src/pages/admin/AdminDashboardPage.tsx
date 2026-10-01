@@ -5,6 +5,9 @@ import { inventarioService } from '../../services/inventarioService';
 import { Producto, Categoria, Inventario, getStockStatus } from '../../types/database';
 import { StockBadge } from '../../components/catalog/StockBadge';
 import { StockAdjustModal } from '../../components/admin/StockAdjustModal';
+import { supabase } from '../../lib/supabase';
+import { SUPABASE_SCHEMA_SQL } from '../../lib/schemaSql';
+import { useToast } from '../../contexts/ToastContext';
 import {
   Package,
   CheckCircle,
@@ -14,6 +17,9 @@ import {
   ArrowRight,
   Plus,
   RefreshCw,
+  Copy,
+  ExternalLink,
+  ShieldAlert,
 } from 'lucide-react';
 import { AdminTab } from '../../components/admin/AdminSidebar';
 
@@ -29,11 +35,30 @@ export const AdminDashboardPage: React.FC<AdminDashboardPageProps> = ({
   const [productos, setProductos] = useState<Producto[]>([]);
   const [categorias, setCategorias] = useState<Categoria[]>([]);
   const [loading, setLoading] = useState(true);
+  const [permissionError, setPermissionError] = useState<string | null>(null);
+  const [copiedSql, setCopiedSql] = useState(false);
   const [selectedInventario, setSelectedInventario] = useState<Inventario | null>(null);
+  const { success: toastSuccess } = useToast();
 
   const loadData = async () => {
     try {
       setLoading(true);
+      setPermissionError(null);
+
+      // Check if Supabase tables have permission issues (e.g. 42501)
+      const { error: testErr } = await supabase.from('productos').select('id').limit(1);
+      if (testErr) {
+        if (testErr.code === '42501' || testErr.message?.includes('permission denied')) {
+          setPermissionError(
+            'Tu base de datos Supabase requiere ejecutar permisos SQL (Error 42501). Concede acceso a las tablas con el script de abajo.'
+          );
+        } else if (testErr.code === '42P01' || testErr.message?.includes('does not exist')) {
+          setPermissionError(
+            'Las tablas de AlexStore aún no están creadas en Supabase. Ejecuta el script SQL para inicializarlas.'
+          );
+        }
+      }
+
       const [prods, cats] = await Promise.all([
         productosService.getProductos(),
         categoriasService.getCategorias(),
@@ -44,6 +69,17 @@ export const AdminDashboardPage: React.FC<AdminDashboardPageProps> = ({
       console.error('Error loading dashboard data:', e);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleCopySql = async () => {
+    try {
+      await navigator.clipboard.writeText(SUPABASE_SCHEMA_SQL);
+      setCopiedSql(true);
+      toastSuccess('¡Script SQL copiado! Pégalo en el SQL Editor de tu consola Supabase.');
+      setTimeout(() => setCopiedSql(false), 3000);
+    } catch {
+      // Fallback
     }
   };
 
@@ -73,6 +109,53 @@ export const AdminDashboardPage: React.FC<AdminDashboardPageProps> = ({
 
   return (
     <div className="space-y-8">
+      {/* Supabase Error 42501 / Permissions Notice Banner */}
+      {permissionError && (
+        <div className="p-5 rounded-2xl bg-amber-50 border border-amber-300 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4 animate-in fade-in">
+          <div className="flex items-start gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
+              <ShieldAlert className="w-5 h-5 text-amber-700" />
+            </div>
+            <div>
+              <h3 className="text-sm font-black text-amber-950">
+                Atención: Permisos requeridos en Supabase (Error 42501)
+              </h3>
+              <p className="text-xs text-amber-800 mt-1 max-w-2xl leading-relaxed">
+                {permissionError} Para solucionarlo en 1 minuto, copia el script SQL y ejecútalo en el <strong>SQL Editor</strong> de tu proyecto Supabase.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 w-full md:w-auto shrink-0">
+            <button
+              onClick={handleCopySql}
+              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#0c0a08] hover:bg-stone-800 text-[#f7e8c5] border border-[#c5a059]/40 font-bold text-xs uppercase tracking-wider shadow-sm transition-all cursor-pointer"
+            >
+              {copiedSql ? (
+                <>
+                  <CheckCircle className="w-4 h-4 text-emerald-400" />
+                  ¡Copiado!
+                </>
+              ) : (
+                <>
+                  <Copy className="w-4 h-4 text-[#c5a059]" />
+                  Copiar Script SQL
+                </>
+              )}
+            </button>
+            <a
+              href="https://supabase.com/dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-xl border border-amber-300 text-amber-900 hover:bg-amber-100 transition-colors"
+              title="Abrir Supabase Dashboard"
+            >
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* Top Banner / Actions */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
         <div>

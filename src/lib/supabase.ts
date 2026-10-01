@@ -3,6 +3,11 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 const STORAGE_KEY_URL = 'catalogo_supabase_url';
 const STORAGE_KEY_ANON = 'catalogo_supabase_anon_key';
 
+// Default Supabase project credentials for AlexStore
+const DEFAULT_SUPABASE_URL = 'https://gfkzdakcekvvylzsyexi.supabase.co';
+const DEFAULT_SUPABASE_ANON_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdma3pkYWtjZWt2dnlsenN5ZXhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA4MTI4ODgsImV4cCI6MjEwNjM4ODg4OH0.i7-pp84tyCW-a1HG76Q7Ek9WL6Z5jLm_dzUGQMPdlik';
+
 export function getSupabaseCredentials(): { url: string; anonKey: string } {
   const envUrl = import.meta.env.VITE_SUPABASE_URL;
   const envAnon = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -11,11 +16,11 @@ export function getSupabaseCredentials(): { url: string; anonKey: string } {
     return { url: envUrl, anonKey: envAnon };
   }
 
-  // Check localStorage fallback for preview/runtime flexibility
+  // Check localStorage fallback
   try {
     const localUrl = localStorage.getItem(STORAGE_KEY_URL);
     const localAnon = localStorage.getItem(STORAGE_KEY_ANON);
-    if (localUrl && localAnon) {
+    if (localUrl && localAnon && !localUrl.includes('tu-proyecto')) {
       return { url: localUrl, anonKey: localAnon };
     }
   } catch (e) {
@@ -23,8 +28,8 @@ export function getSupabaseCredentials(): { url: string; anonKey: string } {
   }
 
   return {
-    url: envUrl || '',
-    anonKey: envAnon || '',
+    url: DEFAULT_SUPABASE_URL,
+    anonKey: DEFAULT_SUPABASE_ANON_KEY,
   };
 }
 
@@ -44,7 +49,6 @@ export function saveSupabaseCredentials(url: string, anonKey: string): void {
   try {
     localStorage.setItem(STORAGE_KEY_URL, url.trim());
     localStorage.setItem(STORAGE_KEY_ANON, anonKey.trim());
-    // Refresh page to re-initialize singleton with fresh credentials
     window.location.reload();
   } catch (e) {
     console.error('Error saving Supabase credentials:', e);
@@ -63,13 +67,9 @@ export function clearSupabaseCredentials(): void {
 
 const { url, anonKey } = getSupabaseCredentials();
 
-// Create safe fallback instance if credentials are not yet configured to prevent app crash
-const fallbackUrl = 'https://placeholder-project.supabase.co';
-const fallbackKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.placeholder';
-
 export const supabase: SupabaseClient = createClient(
-  url && url.startsWith('https://') ? url : fallbackUrl,
-  anonKey && anonKey.length > 10 ? anonKey : fallbackKey,
+  url,
+  anonKey,
   {
     auth: {
       persistSession: true,

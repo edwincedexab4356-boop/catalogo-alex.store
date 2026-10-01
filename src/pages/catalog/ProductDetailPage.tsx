@@ -292,7 +292,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             <div className="grid grid-cols-2 gap-3 pt-2 text-xs text-stone-600">
               <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#faf7f0] border border-[#ece4d5]">
                 <CheckCircle2 className="w-4 h-4 text-[#c5a059] shrink-0" />
-                <span>Garantía AlexStore</span>
+                <span>Calidad 1:1 Top</span>
               </div>
               <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#faf7f0] border border-[#ece4d5]">
                 <ShieldCheck className="w-4 h-4 text-[#c5a059] shrink-0" />

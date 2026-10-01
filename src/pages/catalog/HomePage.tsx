@@ -74,7 +74,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           </h1>
 
           <p className="text-stone-300 text-xs sm:text-sm leading-relaxed max-w-xl">
-            La mejor calidad 1:1 en tu tienda de confianza. Diseños exclusivos con acabados de máximo nivel, garantía asegurada y atención directa a tu WhatsApp. ¡Pide el tuyo antes de que se agote!
+            La mejor calidad 1:1 en tu tienda de confianza. Diseños exclusivos con acabados de máximo nivel y atención directa a tu WhatsApp. ¡Pide el tuyo antes de que se agote!
           </p>
         </div>
       </section>
