@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" fill="none">
+  <!-- Reemplaza este archivo en /public/images/logo.svg o añade /public/images/logo.png para tu propio logo -->
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+  </defs>
+  
+  <rect x="8" y="14" width="52" height="52" rx="14" fill="url(#brandGrad)" />
+  <path d="M22 28H46M22 40H46M22 52H36" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" />
+  <circle cx="44" cy="52" r="3.5" fill="#38BDF8" />
+  
+  <text x="74" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.5" fill="#0F172A">
+    CATÁLOGO
+  </text>
+  <text x="75" y="59" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" fill="#64748B">
+    DIGITAL STUDIO
+  </text>
+</svg>
