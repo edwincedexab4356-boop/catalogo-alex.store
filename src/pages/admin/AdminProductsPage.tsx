@@ -256,9 +256,10 @@ export const AdminProductsPage: React.FC = () => {
 
                       {/* Categoría */}
                       <td className="py-3 px-4 text-xs font-semibold text-slate-700">
-                        {p.categoria?.nombre || (
-                          <span className="text-slate-400 font-normal italic">Sin categoría</span>
-                        )}
+                        {p.categoria?.nombre ||
+                          categorias.find((c) => String(c.id) === String(p.categoria_id))?.nombre || (
+                            <span className="text-slate-400 font-normal italic">Sin categoría</span>
+                          )}
                       </td>
 
                       {/* Precio */}

@@ -218,7 +218,7 @@ export const ProductFormModal: React.FC<ProductFormModalProps> = ({
           nombre: nombre.trim(),
           descripcion: descripcion.trim() || null,
           precio: numericPrice,
-          categoria_id: categoriaId ? categoriaId : null,
+          categoria_id: categoriaId && categoriaId.trim() !== '' ? categoriaId.trim() : null,
           imagen_url: finalUrls[0] || null, // Slot 1 is main cover
           imagenes: finalUrls, // Array with up to 4 images
           activo,

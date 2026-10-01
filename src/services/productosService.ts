@@ -131,10 +131,13 @@ export const productosService = {
     initialStock: { cantidad: number; stock_minimo: number } = { cantidad: 10, stock_minimo: 3 }
   ): Promise<Producto> {
     const rawCatId = payload.categoria_id;
-    const cleanCatId =
-      rawCatId !== undefined && rawCatId !== null && rawCatId !== '' && !isNaN(Number(rawCatId)) && Number(rawCatId) > 0
-        ? Number(rawCatId)
-        : null;
+    let cleanCatId: string | number | null = null;
+    if (rawCatId !== undefined && rawCatId !== null) {
+      const strVal = String(rawCatId).trim();
+      if (strVal !== '' && strVal !== 'null' && strVal !== 'undefined') {
+        cleanCatId = strVal;
+      }
+    }
 
     const { data, error } = await supabase
       .from('productos')
@@ -192,10 +195,14 @@ export const productosService = {
     if (payload.precio !== undefined) updateData.precio = payload.precio;
     if (payload.categoria_id !== undefined) {
       const rawCatId = payload.categoria_id;
-      updateData.categoria_id =
-        rawCatId !== null && rawCatId !== '' && !isNaN(Number(rawCatId)) && Number(rawCatId) > 0
-          ? Number(rawCatId)
-          : null;
+      let cleanCatId: string | number | null = null;
+      if (rawCatId !== null) {
+        const strVal = String(rawCatId).trim();
+        if (strVal !== '' && strVal !== 'null' && strVal !== 'undefined') {
+          cleanCatId = strVal;
+        }
+      }
+      updateData.categoria_id = cleanCatId;
     }
     if (payload.imagen_url !== undefined) updateData.imagen_url = payload.imagen_url || null;
     if (payload.imagenes !== undefined) updateData.imagenes = payload.imagenes || [];
