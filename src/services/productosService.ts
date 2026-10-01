@@ -130,6 +130,12 @@ export const productosService = {
     },
     initialStock: { cantidad: number; stock_minimo: number } = { cantidad: 10, stock_minimo: 3 }
   ): Promise<Producto> {
+    const rawCatId = payload.categoria_id;
+    const cleanCatId =
+      rawCatId !== undefined && rawCatId !== null && rawCatId !== '' && !isNaN(Number(rawCatId)) && Number(rawCatId) > 0
+        ? Number(rawCatId)
+        : null;
+
     const { data, error } = await supabase
       .from('productos')
       .insert([
@@ -137,7 +143,7 @@ export const productosService = {
           nombre: payload.nombre.trim(),
           descripcion: payload.descripcion?.trim() || null,
           precio: payload.precio,
-          categoria_id: payload.categoria_id ? Number(payload.categoria_id) : null,
+          categoria_id: cleanCatId,
           imagen_url: payload.imagen_url || null,
           imagenes: payload.imagenes || [],
           activo: payload.activo !== undefined ? payload.activo : true,
@@ -185,7 +191,11 @@ export const productosService = {
     if (payload.descripcion !== undefined) updateData.descripcion = payload.descripcion?.trim() || null;
     if (payload.precio !== undefined) updateData.precio = payload.precio;
     if (payload.categoria_id !== undefined) {
-      updateData.categoria_id = payload.categoria_id ? Number(payload.categoria_id) : null;
+      const rawCatId = payload.categoria_id;
+      updateData.categoria_id =
+        rawCatId !== null && rawCatId !== '' && !isNaN(Number(rawCatId)) && Number(rawCatId) > 0
+          ? Number(rawCatId)
+          : null;
     }
     if (payload.imagen_url !== undefined) updateData.imagen_url = payload.imagen_url || null;
     if (payload.imagenes !== undefined) updateData.imagenes = payload.imagenes || [];

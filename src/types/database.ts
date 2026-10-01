@@ -12,8 +12,10 @@ export interface Categoria {
   nombre: string;
   descripcion?: string | null;
   imagen_url?: string | null;
-  activo: boolean;
+  activo?: boolean;
+  activa?: boolean;
   creado_en?: string;
+  actualizado_en?: string;
   total_productos?: number;
 }
 
