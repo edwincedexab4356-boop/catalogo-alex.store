@@ -18,12 +18,12 @@ export const ProductGallery: React.FC<ProductGalleryProps> = ({
     if (mainImageUrl) list.push(mainImageUrl);
     if (images && Array.isArray(images)) {
       images.forEach((img) => {
-        if (img && !list.includes(img)) {
+        if (img && !list.includes(img) && list.length < 4) {
           list.push(img);
         }
       });
     }
-    return list;
+    return list.slice(0, 4);
   }, [mainImageUrl, images]);
 
   const [selectedIndex, setSelectedIndex] = useState(0);

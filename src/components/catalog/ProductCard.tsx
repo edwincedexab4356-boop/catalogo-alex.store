@@ -74,9 +74,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ producto, onSelect }) 
         )}
 
         {/* Gallery badge if multiple images */}
-        {hasImages && (
-          <div className="absolute bottom-3 right-3 bg-[#0c0a08]/75 backdrop-blur-md text-[#f1eaa7] text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-[#c5a059]/20">
-            <span>+{producto.imagenes?.length} fotos</span>
+        {producto.imagenes && producto.imagenes.length > 1 && (
+          <div className="absolute bottom-3 right-3 bg-[#0c0a08]/85 backdrop-blur-md text-[#f1eaa7] text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-[#c5a059]/30 shadow-xs">
+            <span>{producto.imagenes.length} fotos</span>
           </div>
         )}
 
