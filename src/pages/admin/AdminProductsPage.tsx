@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { productosService } from '../../services/productosService';
 import { categoriasService } from '../../services/categoriasService';
 import { storageService } from '../../services/storageService';
+import { inventarioService } from '../../services/inventarioService';
 import { Producto, Categoria } from '../../types/database';
 import { ProductFormModal } from '../../components/admin/ProductFormModal';
 import { StockBadge } from '../../components/catalog/StockBadge';
@@ -96,12 +97,15 @@ export const AdminProductsPage: React.FC = () => {
     }
   };
 
-  const handleModalSubmit = async (data: any, initialStock?: any) => {
+  const handleModalSubmit = async (data: any, stockData?: { cantidad: number; stock_minimo: number }) => {
     if (productToEdit) {
-      const updated = await productosService.updateProducto(productToEdit.id, data);
+      await productosService.updateProducto(productToEdit.id, data);
+      if (stockData) {
+        await inventarioService.updateStock(productToEdit.id, stockData.cantidad, stockData.stock_minimo);
+      }
       await loadData();
     } else {
-      await productosService.createProducto(data, initialStock);
+      await productosService.createProducto(data, stockData);
       await loadData();
     }
   };

@@ -144,7 +144,17 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const encoded = encodeURIComponent(message);
     const phone = (whatsappNumber.trim() || DEFAULT_PHONE).replace(/[^0-9]/g, '');
     const url = `https://wa.me/${phone}?text=${encoded}`;
-    window.open(url, '_blank');
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch {
+      window.location.href = url;
+    }
   };
 
   // Direct single product order to WhatsApp
@@ -167,7 +177,17 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const encoded = encodeURIComponent(message);
     const phone = (whatsappNumber.trim() || DEFAULT_PHONE).replace(/[^0-9]/g, '');
     const url = `https://wa.me/${phone}?text=${encoded}`;
-    window.open(url, '_blank');
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch {
+      window.location.href = url;
+    }
   };
 
   return (

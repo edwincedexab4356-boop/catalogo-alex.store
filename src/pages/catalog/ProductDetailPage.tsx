@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { productosService } from '../../services/productosService';
+import { categoriasService } from '../../services/categoriasService';
 import { Producto } from '../../types/database';
 import { ProductGallery } from '../../components/catalog/ProductGallery';
 import { StockBadge } from '../../components/catalog/StockBadge';
@@ -45,6 +46,14 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
         setLoading(true);
         const data = await productosService.getProductoById(productId);
         if (isMounted && data) {
+          if (!data.categoria && data.categoria_id) {
+            try {
+              const cat = await categoriasService.getCategoriaById(data.categoria_id);
+              if (cat) data.categoria = cat;
+            } catch {
+              // ignore
+            }
+          }
           setProducto(data);
           setCantidad(1);
           if (data.categoria_id) {

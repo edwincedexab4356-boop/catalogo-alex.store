@@ -62,6 +62,8 @@ export const ProductFormModal: React.FC<ProductFormModalProps> = ({
       setPrecio(productToEdit.precio ? productToEdit.precio.toString() : '0');
       setCategoriaId(productToEdit.categoria_id ? productToEdit.categoria_id.toString() : '');
       setActivo(productToEdit.activo ?? true);
+      setCantidad(productToEdit.inventario?.cantidad ?? 10);
+      setStockMinimo(productToEdit.inventario?.stock_minimo ?? 3);
 
       // Collect existing images up to 4
       const urls: string[] = [];
@@ -223,7 +225,7 @@ export const ProductFormModal: React.FC<ProductFormModalProps> = ({
           imagenes: finalUrls, // Array with up to 4 images
           activo,
         },
-        !isEditing ? { cantidad, stock_minimo: stockMinimo } : undefined
+        { cantidad, stock_minimo: stockMinimo }
       );
 
       toastSuccess(
@@ -323,40 +325,45 @@ export const ProductFormModal: React.FC<ProductFormModalProps> = ({
           </div>
         </div>
 
-        {/* Initial inventory fields when creating */}
-        {!isEditing && (
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">
-              Inventario Inicial (public.inventario)
+        {/* Control de inventario (public.inventario) */}
+        <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center justify-between mb-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700">
+              {isEditing ? 'Control de Inventario (public.inventario)' : 'Inventario Inicial (public.inventario)'}
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-medium text-slate-600 mb-1">
-                  Cantidad Inicial de Unidades
-                </label>
-                <input
-                  type="number"
-                  min="0"
-                  value={cantidad}
-                  onChange={(e) => setCantidad(Math.max(0, parseInt(e.target.value) || 0))}
-                  className="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-sm"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-medium text-slate-600 mb-1">
-                  Alerta de Stock Mínimo
-                </label>
-                <input
-                  type="number"
-                  min="0"
-                  value={stockMinimo}
-                  onChange={(e) => setStockMinimo(Math.max(0, parseInt(e.target.value) || 0))}
-                  className="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-sm"
-                />
-              </div>
+            {isEditing && (
+              <span className="text-[11px] font-semibold text-[#c5a059]">
+                Se actualizará en tiempo real
+              </span>
+            )}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-medium text-slate-600 mb-1">
+                Cantidad de Unidades Disponibles
+              </label>
+              <input
+                type="number"
+                min="0"
+                value={cantidad}
+                onChange={(e) => setCantidad(Math.max(0, parseInt(e.target.value) || 0))}
+                className="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-sm bg-white"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-medium text-slate-600 mb-1">
+                Alerta de Stock Mínimo
+              </label>
+              <input
+                type="number"
+                min="0"
+                value={stockMinimo}
+                onChange={(e) => setStockMinimo(Math.max(0, parseInt(e.target.value) || 0))}
+                className="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-sm bg-white"
+              />
             </div>
           </div>
-        )}
+        </div>
 
         {/* Descripción */}
         <div>

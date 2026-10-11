@@ -147,6 +147,7 @@ export const categoriasService = {
 
     if (isActivo !== undefined) {
       updateData.activa = isActivo;
+      updateData.activo = isActivo;
     }
 
     let { data, error } = await supabase
@@ -156,7 +157,7 @@ export const categoriasService = {
       .select()
       .single();
 
-    // If 'activa' column does not exist, retry with 'activo'
+    // If 'activa' column does not exist, retry with 'activo' only
     if (error && (error.code === '42703' || error.message?.includes('activa'))) {
       delete updateData.activa;
       updateData.activo = isActivo;
@@ -182,7 +183,7 @@ export const categoriasService = {
   async toggleActivo(id: number | string, activo: boolean): Promise<void> {
     let { error } = await supabase
       .from('categorias')
-      .update({ activa: activo })
+      .update({ activa: activo, activo: activo })
       .eq('id', id);
 
     if (error && (error.code === '42703' || error.message?.includes('activa'))) {

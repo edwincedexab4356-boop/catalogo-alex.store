@@ -34,7 +34,7 @@ export const inventarioService = {
     const { data, error } = await supabase
       .from('inventario')
       .select('*')
-      .eq('producto_id', productoId)
+      .eq('producto_id', String(productoId).trim())
       .maybeSingle();
 
     if (error) throw error;
@@ -46,6 +46,7 @@ export const inventarioService = {
     cantidad: number,
     stockMinimo?: number
   ): Promise<Inventario> {
+    const cleanProdId = String(productoId).trim();
     const safeCantidad = Math.max(0, Math.floor(cantidad));
     const updateData: Record<string, any> = {
       cantidad: safeCantidad,
@@ -59,7 +60,7 @@ export const inventarioService = {
     const { data, error } = await supabase
       .from('inventario')
       .update(updateData)
-      .eq('producto_id', productoId)
+      .eq('producto_id', cleanProdId)
       .select()
       .maybeSingle();
 
@@ -71,7 +72,7 @@ export const inventarioService = {
         .from('inventario')
         .insert([
           {
-            producto_id: productoId,
+            producto_id: cleanProdId,
             cantidad: safeCantidad,
             stock_minimo: stockMinimo !== undefined ? Math.max(0, stockMinimo) : 5,
           },
