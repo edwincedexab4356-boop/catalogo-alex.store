@@ -63,13 +63,25 @@ export const productosService = {
       }
     }
 
-    return (data || []).map((p: any) => ({
+    const mapped = (data || []).map((p: any) => ({
       ...p,
       // Normalize inventario if array was returned
       inventario: Array.isArray(p.inventario) ? p.inventario[0] : p.inventario,
       categoria: Array.isArray(p.categoria) ? p.categoria[0] : p.categoria,
       imagenes: Array.isArray(p.imagenes) ? p.imagenes : [],
     })) as Producto[];
+
+    // Place products with available stock first, out-of-stock products at the end
+    return mapped.sort((a, b) => {
+      const stockA = a.inventario?.cantidad ?? 0;
+      const stockB = b.inventario?.cantidad ?? 0;
+      const aAvailable = stockA > 0;
+      const bAvailable = stockB > 0;
+
+      if (aAvailable && !bAvailable) return -1;
+      if (!aAvailable && bAvailable) return 1;
+      return 0;
+    });
   },
 
   async getProductoById(id: number | string): Promise<Producto | null> {

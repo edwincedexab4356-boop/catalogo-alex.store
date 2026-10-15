@@ -1,0 +1,1116 @@
+{
+  "categorias": [
+    {
+      "id": "c2d9d965-19ed-4903-b3e1-e49e542d503f",
+      "nombre": "Nba temporada actual",
+      "descripcion": null,
+      "imagen_url": null,
+      "activa": true,
+      "creado_en": "2026-10-01T22:19:38.475451+00:00",
+      "actualizado_en": "2026-10-01T22:19:38.475451+00:00",
+      "activo": true
+    },
+    {
+      "id": "66ab239d-f1eb-4578-a917-bc338d2f1b97",
+      "nombre": "Camisetas del Real Madrid",
+      "descripcion": "Equipacion del Real Madrid",
+      "imagen_url": null,
+      "activa": true,
+      "creado_en": "2026-10-02T00:17:25.998246+00:00",
+      "actualizado_en": "2026-10-02T00:17:25.998246+00:00",
+      "activo": true
+    },
+    {
+      "id": "0eafa76a-6c1a-4394-8816-97044404f229",
+      "nombre": "Camiseta del Barcelona",
+      "descripcion": null,
+      "imagen_url": null,
+      "activa": true,
+      "creado_en": "2026-10-02T13:00:49.616036+00:00",
+      "actualizado_en": "2026-10-02T13:00:49.616036+00:00",
+      "activo": true
+    },
+    {
+      "id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "nombre": "Camiseta del fútbol",
+      "descripcion": null,
+      "imagen_url": null,
+      "activa": true,
+      "creado_en": "2026-10-07T23:24:00.366211+00:00",
+      "actualizado_en": "2026-10-07T23:24:00.366211+00:00",
+      "activo": true
+    }
+  ],
+  "productos": [
+    {
+      "id": "b79e6014-f0d8-46bb-8281-5b7a58a71756",
+      "nombre": "thunder",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894695105_thunder_n2t4d2.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894695105_thunder_n2t4d2.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894695716_thunder1_92a0lh.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:44:56.414306+00:00",
+      "actualizado_en": "2026-10-01T22:44:56.414306+00:00"
+    },
+    {
+      "id": "2b665c8e-28fe-4630-a375-e69319193a79",
+      "nombre": "spurs",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894734489_spurs_jg444z.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894734489_spurs_jg444z.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894735091_spurs1_9qd4c3.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:45:35.705858+00:00",
+      "actualizado_en": "2026-10-01T22:49:51.161+00:00"
+    },
+    {
+      "id": "19758a53-472a-4767-a277-378f0730976e",
+      "nombre": "Sixer",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894765570_sixer_ope1op.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894765570_sixer_ope1op.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894766475_sixer1_zzpbmk.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:46:07.153558+00:00",
+      "actualizado_en": "2026-10-01T22:49:56.673+00:00"
+    },
+    {
+      "id": "c3cdec9a-eacb-417e-8d90-c8a5fb115769",
+      "nombre": "philadelphia",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894855896_phila_w0rpf9.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894855896_phila_w0rpf9.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894856668_phila1_24zk7o.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:47:37.332584+00:00",
+      "actualizado_en": "2026-10-01T22:50:09.329+00:00"
+    },
+    {
+      "id": "dda18850-a4ca-4100-a21c-ba32104b5e81",
+      "nombre": "philadelphia(gris)",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894899720_phila_blanco__x58yvd.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894899720_phila_blanco__x58yvd.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894900522_phila_blanco_1_-_copia_swjg5m.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:48:21.256583+00:00",
+      "actualizado_en": "2026-10-01T22:50:15.385+00:00"
+    },
+    {
+      "id": "e6eddce9-6e91-421c-9900-144af799eea8",
+      "nombre": "philadelphia(azul)",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894937521_phila_azul__h09r4x.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894937521_phila_azul__h09r4x.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894938211_phila_azul_1_pl22w5.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:48:58.857382+00:00",
+      "actualizado_en": "2026-10-01T22:50:20.097+00:00"
+    },
+    {
+      "id": "1f1e0ac9-aed0-4256-b2f3-71a9a9483911",
+      "nombre": "NEW YORK",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894982924_ney_york_azul__iwc8nr.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894982924_ney_york_azul__iwc8nr.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894983796_ney_york_azul_1_e7rur8.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:49:44.456181+00:00",
+      "actualizado_en": "2026-10-01T22:50:23.722+00:00"
+    },
+    {
+      "id": "c52a1b33-2d91-4aa1-958f-b3945d65e0d6",
+      "nombre": "new york (blanco )",
+      "descripcion": "entrega inmediata",
+      "precio": 42,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895058409_new_york_4hw4qn.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895058409_new_york_4hw4qn.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895059035_new_york1_ifu9tm.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:50:59.712597+00:00",
+      "actualizado_en": "2026-10-01T22:51:01.809+00:00"
+    },
+    {
+      "id": "9eedb393-b559-4794-ab6d-23fd67334990",
+      "nombre": "miami(negro)",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895094873_miami_negro__uxvpb0.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895094873_miami_negro__uxvpb0.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895095453_miami_negro_1_fxab4i.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:51:36.087316+00:00",
+      "actualizado_en": "2026-10-01T22:51:36.087316+00:00"
+    },
+    {
+      "id": "e9f6ed52-6cd7-4b54-896b-c731d82e0638",
+      "nombre": "heat",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895124649_heat_pmym6e.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895124649_heat_pmym6e.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895125268_heat1_0iz8x0.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:52:06.145515+00:00",
+      "actualizado_en": "2026-10-01T22:52:11.041+00:00"
+    },
+    {
+      "id": "729857d6-cd98-4cb9-9ba5-b7402b4c30ea",
+      "nombre": "Miami (rojo)",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895189906_miami_kj1keo.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895189906_miami_kj1keo.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790895190702_miami_1_q4cb5l.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:53:11.365649+00:00",
+      "actualizado_en": "2026-10-01T22:53:20.994+00:00"
+    },
+    {
+      "id": "0c7f642f-3237-49b8-a5b6-cf7e06a428a3",
+      "nombre": "san antonio",
+      "descripcion": "entrega inmediata",
+      "precio": 45,
+      "categoria_id": null,
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894812993_san_antonio_a9zx6u.jfif",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894812993_san_antonio_a9zx6u.jfif",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790894813632_san_antonio1_3u8lpz.jfif"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-01T22:46:54.358283+00:00",
+      "actualizado_en": "2026-10-01T22:53:30.45+00:00"
+    },
+    {
+      "id": "b4c38317-f000-439a-8003-e9a832d9fdda",
+      "nombre": "Camiseta del Real Madrid (Blanca26/27) Dorsal 10 Mbappe",
+      "descripcion": "Recomendable pedir una talla Más\nTallas \nS:1\nM:2\n2XL :1",
+      "precio": 48,
+      "categoria_id": "66ab239d-f1eb-4578-a917-bc338d2f1b97",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790900997152_1000015471_2hhoz1.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790900997152_1000015471_2hhoz1.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790900999573_1000015475_s24vn0.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-02T00:29:59.271604+00:00",
+      "actualizado_en": "2026-10-02T00:31:21.988+00:00"
+    },
+    {
+      "id": "2fd96ae2-4e8d-4198-a273-052578f7f97e",
+      "nombre": "Camiseta del Real Madrid (Blanca 26/27)Dorsal 5 Bellingham",
+      "descripcion": "Recomendable pedir una talla Más\nTallas\nS:1\nM:2\n2XL:1",
+      "precio": 48,
+      "categoria_id": "66ab239d-f1eb-4578-a917-bc338d2f1b97",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790900820369_1000015527_9rxgpk.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790900820369_1000015527_9rxgpk.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790900821347_1000015363_ctuyuo.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-02T00:27:02.626175+00:00",
+      "actualizado_en": "2026-10-02T00:31:40.313+00:00"
+    },
+    {
+      "id": "f5b5b2d9-f253-41bb-98d9-8726bc23ae65",
+      "nombre": "Camiseta del Real Madrid manga larga (26/27) Dorsal 10 Mbappe",
+      "descripcion": "Preferencia pedir una talla Más\nTallas\nS:1\nM:1\nXL:1",
+      "precio": 48,
+      "categoria_id": "66ab239d-f1eb-4578-a917-bc338d2f1b97",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790901456136_1000015467_27k0z9.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790901456136_1000015467_27k0z9.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790901457120_1000015482_kajjvh.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-02T00:37:37.061586+00:00",
+      "actualizado_en": "2026-10-02T00:37:37.061586+00:00"
+    },
+    {
+      "id": "a8d627f4-0c2c-4dd7-a934-b8fba8656ac9",
+      "nombre": "Camiseta del Real Madrid ( Blanca 26/27) Dorsal 7 Vini Jr.",
+      "descripcion": "Preferencia pedir una talla Más\nTallas\nS:3\nM:2\nL:2\nXL:1\n2XL :2",
+      "precio": 48,
+      "categoria_id": "66ab239d-f1eb-4578-a917-bc338d2f1b97",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790901658038_1000015397_nrfkz3.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790901658038_1000015397_nrfkz3.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790901659046_1000015478_29ii0m.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-02T00:40:58.904648+00:00",
+      "actualizado_en": "2026-10-02T00:40:58.904648+00:00"
+    },
+    {
+      "id": "c5b2a371-6250-4334-b68d-2bb3bdc7ad7e",
+      "nombre": "Camiseta del Real Madrid Manga larga (Verde 26/27) Dorsal 10 Mbappe",
+      "descripcion": "Corren a la talla\nXL:1",
+      "precio": 50,
+      "categoria_id": "66ab239d-f1eb-4578-a917-bc338d2f1b97",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790902232825_1000015415_eoxisv.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790902232825_1000015415_eoxisv.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790902233622_1000015449_bz454a.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-02T00:50:33.559896+00:00",
+      "actualizado_en": "2026-10-02T00:50:33.559896+00:00"
+    },
+    {
+      "id": "897c1242-1a3f-4a45-957b-6dbfa4a9c761",
+      "nombre": "Camiseta del Real Madrid segunda equipacion (Verde 26/27) Dorsal 10 Mbappe",
+      "descripcion": "Las tallas corren chicas\nS:0\nM:2\nL:3\n4XL:1",
+      "precio": 50,
+      "categoria_id": "66ab239d-f1eb-4578-a917-bc338d2f1b97",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790902584988_1000015411_ckl112.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790902584988_1000015411_ckl112.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790902585878_1000015460_bhi1mv.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-02T00:56:25.618233+00:00",
+      "actualizado_en": "2026-10-02T01:00:46.47+00:00"
+    },
+    {
+      "id": "3e0496bd-10a3-4e6b-9490-daac7b148fc3",
+      "nombre": "Camiseta del Real Madrid tercera equipacion (Rosada 26/27)Dorsal 10 Mbappe",
+      "descripcion": "Tallas\nS:1\nM:1\nL:1",
+      "precio": 50,
+      "categoria_id": "66ab239d-f1eb-4578-a917-bc338d2f1b97",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790903072360_1000015520_xfm5c2.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790903072360_1000015520_xfm5c2.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790903073304_1000015501_aiuslx.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-02T01:04:33.288626+00:00",
+      "actualizado_en": "2026-10-02T01:04:33.288626+00:00"
+    },
+    {
+      "id": "132255d4-f60d-4333-a0b9-994a58dc74fc",
+      "nombre": "Camiseta del Barcelona primera equipacion (26/27) Dorsal 10 Lamine Yamal",
+      "descripcion": "Las tallas corren chicas\nTallas\nS:2\nM:3\nL:1\nXL :1\n2XL :2\n3XL:2",
+      "precio": 48,
+      "categoria_id": "0eafa76a-6c1a-4394-8816-97044404f229",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790946258237_1000015623_yh50ze.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790946258237_1000015623_yh50ze.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790946260196_1000015604_ep900n.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-02T13:04:20.646741+00:00",
+      "actualizado_en": "2026-10-02T13:04:20.646741+00:00"
+    },
+    {
+      "id": "a8fbb6a9-8d3a-41ec-a771-b7b8d98bdd23",
+      "nombre": "Camiseta del Barcelona primera equipacion (26/27) Dorsal 11 Raphinha",
+      "descripcion": null,
+      "precio": 48,
+      "categoria_id": "0eafa76a-6c1a-4394-8816-97044404f229",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790946529644_1000015608_4ws5hs.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790946529644_1000015608_4ws5hs.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1790946530974_1000015610_v5as4x.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-02T13:08:52.32464+00:00",
+      "actualizado_en": "2026-10-02T13:08:52.32464+00:00"
+    },
+    {
+      "id": "f2e5d400-5755-449e-8353-6be590c8d499",
+      "nombre": "Camiseta del Barcelona tercera equipacion (26/27) Dorsal 10 Lamine Yamal",
+      "descripcion": "La entrega es inmediata",
+      "precio": 50,
+      "categoria_id": "0eafa76a-6c1a-4394-8816-97044404f229",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791039973997_1000015726_va9ob5.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791039973997_1000015726_va9ob5.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791039975328_1000015733_g5f9e8.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-03T15:06:15.726018+00:00",
+      "actualizado_en": "2026-10-03T15:08:18.269+00:00"
+    },
+    {
+      "id": "286f69b8-3c45-43aa-9c16-f3fd6d49dcae",
+      "nombre": "Camiseta del Barcelona según equipacion (26/27) Dorsal 10 Lamine Yamal",
+      "descripcion": "Versión jugador\nLas tallas corren chicas",
+      "precio": 50,
+      "categoria_id": "0eafa76a-6c1a-4394-8816-97044404f229",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791040269890_1000015730_xxtxns.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791040269890_1000015730_xxtxns.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791040270524_1000015686_wrvbrz.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-03T15:11:10.50947+00:00",
+      "actualizado_en": "2026-10-03T15:11:10.50947+00:00"
+    },
+    {
+      "id": "f32a9723-2ab4-4ab5-9f98-d71570646af5",
+      "nombre": "Camiseta del Barcelona segúnda equipacion (26/27) Dorsal 11 Raphinha",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "0eafa76a-6c1a-4394-8816-97044404f229",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791040359208_1000015730_ai6ypp.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791040359208_1000015730_ai6ypp.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791040359667_1000015711_j41q9g.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-03T15:12:39.791948+00:00",
+      "actualizado_en": "2026-10-03T15:12:39.791948+00:00"
+    },
+    {
+      "id": "9222ad43-0fd7-4f69-ba14-4758622073e1",
+      "nombre": "Camiseta del Barcelona segúnda equipacion (26/27) Dorsal 8 Pedri",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "0eafa76a-6c1a-4394-8816-97044404f229",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791040404229_1000015730_vfxr0w.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791040404229_1000015730_vfxr0w.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791040405194_1000015688_x52q8u.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-03T15:13:31.134765+00:00",
+      "actualizado_en": "2026-10-03T15:13:31.134765+00:00"
+    },
+    {
+      "id": "62006d0d-4e59-4a30-99f1-13fdfca62e15",
+      "nombre": "Camiseta de Los Angeles OHTANI",
+      "descripcion": "Tallas desde S a XL",
+      "precio": 50,
+      "categoria_id": "c2d9d965-19ed-4903-b3e1-e49e542d503f",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791324990803_1000016214_kqii1e.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791324990803_1000016214_kqii1e.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791324991705_1000016207_5wutyh.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-06T22:16:32.84599+00:00",
+      "actualizado_en": "2026-10-06T22:16:32.84599+00:00"
+    },
+    {
+      "id": "85221c3d-1fc7-4974-89d2-e7fc1753cb57",
+      "nombre": "Camiseta de Los Angeles Dodgers OHTANI",
+      "descripcion": "Tallas desde S a XL",
+      "precio": 50,
+      "categoria_id": "c2d9d965-19ed-4903-b3e1-e49e542d503f",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325075244_1000016165_s5b14f.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325075244_1000016165_s5b14f.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325076240_1000016121_xhtd5m.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-06T22:17:57.60021+00:00",
+      "actualizado_en": "2026-10-06T22:17:57.60021+00:00"
+    },
+    {
+      "id": "40c85879-87a7-4903-b5dc-f48ea8fe26ca",
+      "nombre": "Camiseta de Los Boston Ortiz",
+      "descripcion": "Tallas desde S a XL",
+      "precio": 50,
+      "categoria_id": "c2d9d965-19ed-4903-b3e1-e49e542d503f",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325173491_1000016193_omonrm.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325173491_1000016193_omonrm.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325174361_1000016144_vevlxd.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-06T22:19:35.121563+00:00",
+      "actualizado_en": "2026-10-06T22:19:35.121563+00:00"
+    },
+    {
+      "id": "a8746955-086e-4c98-b290-5334de82b37f",
+      "nombre": "Camiseta de Los Angeles Dodgers Dorsal 72",
+      "descripcion": "Tallas desde S a XL",
+      "precio": 50,
+      "categoria_id": "c2d9d965-19ed-4903-b3e1-e49e542d503f",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325244228_1000016151_7oj1um.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325244228_1000016151_7oj1um.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325246167_1000016218_pedjxu.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-06T22:20:47.63559+00:00",
+      "actualizado_en": "2026-10-06T22:20:47.63559+00:00"
+    },
+    {
+      "id": "eb96d4ba-f871-49b1-859a-ee030e668f94",
+      "nombre": "Camiseta de Los Angeles Dodgers Judge Dorsal 99",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "c2d9d965-19ed-4903-b3e1-e49e542d503f",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325305267_1000016117_qt8z0k.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325305267_1000016117_qt8z0k.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325306356_1000016172_ed8x5r.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-06T22:21:47.026296+00:00",
+      "actualizado_en": "2026-10-06T22:21:47.026296+00:00"
+    },
+    {
+      "id": "b4cd97b1-b94c-4433-892d-f9647c41ab34",
+      "nombre": "Camiseta de Los Braves Acuña Jr. Dorsal 13",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "c2d9d965-19ed-4903-b3e1-e49e542d503f",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325608600_1000016158_irfcr9.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325608600_1000016158_irfcr9.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791325609772_1000016179_azpf9v.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-06T22:26:51.080673+00:00",
+      "actualizado_en": "2026-10-06T22:26:51.080673+00:00"
+    },
+    {
+      "id": "b1e38894-7338-40a1-ba0f-f367bc20432c",
+      "nombre": "Camiseta del Bayer de Múnich Dorsal 9 Harry Kane",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415637694_1000015933_vhoq4v.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415637694_1000015933_vhoq4v.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415639106_1000015896_d6h0mk.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:27:29.912879+00:00",
+      "actualizado_en": "2026-10-07T23:27:29.912879+00:00"
+    },
+    {
+      "id": "f7319852-c590-479d-a321-42c90b343e0d",
+      "nombre": "Camiseta de Manchester united Dorsal 8 B. Fernándes",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415782181_1000015926_3eb6kl.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415782181_1000015926_3eb6kl.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415782746_1000015929_gt3djt.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:29:45.782774+00:00",
+      "actualizado_en": "2026-10-07T23:29:45.782774+00:00"
+    },
+    {
+      "id": "cfddc339-a8b8-40e6-a764-f93b9da31c17",
+      "nombre": "Camiseta del Manchester City",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415835554_1000015842_nbg0hm.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415835554_1000015842_nbg0hm.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415839053_1000015817_6c79yy.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:30:42.347195+00:00",
+      "actualizado_en": "2026-10-07T23:30:42.347195+00:00"
+    },
+    {
+      "id": "1760689e-0949-4b9a-8d21-8c1fed89be7d",
+      "nombre": "Camisa del Beyern Múnchen Dorsal 17 Olise",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415918191_1000015858_cs4sfj.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415918191_1000015858_cs4sfj.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415919038_1000015824_dghj3j.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:32:01.115443+00:00",
+      "actualizado_en": "2026-10-07T23:32:01.115443+00:00"
+    },
+    {
+      "id": "ebc2d350-09a3-437a-9f94-50189b9ba394",
+      "nombre": "Camiseta del París Saint-Germán Dorsal 14 D. Doue",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415995322_1000015918_mbcmv4.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415995322_1000015918_mbcmv4.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791415998469_1000015846_m5on47.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:33:20.745002+00:00",
+      "actualizado_en": "2026-10-07T23:33:20.745002+00:00"
+    },
+    {
+      "id": "9d58643a-9eef-48cd-b790-941933ca2fde",
+      "nombre": "Camiseta del Liverpool FC",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416082383_1000015866_7lud0m.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416082383_1000015866_7lud0m.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416086555_1000015910_k8xgus.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:34:58.040258+00:00",
+      "actualizado_en": "2026-10-07T23:34:58.040258+00:00"
+    },
+    {
+      "id": "880af32c-8451-4522-91b2-9e188f058619",
+      "nombre": "Camiseta de ACM Dorsal 14 Modric",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416240758_1000015851_09pfxd.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416240758_1000015851_09pfxd.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416241793_1000015836_hzubpj.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:37:23.78831+00:00",
+      "actualizado_en": "2026-10-07T23:37:23.78831+00:00"
+    },
+    {
+      "id": "ce3da4e4-4255-4708-aa17-3ca40f6f10a9",
+      "nombre": "Camiseta del ajax",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416277651_1000015832_jk7zvs.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416277651_1000015832_jk7zvs.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416278447_1000015886_simcot.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:38:00.555447+00:00",
+      "actualizado_en": "2026-10-07T23:38:00.555447+00:00"
+    },
+    {
+      "id": "2bc46ed0-1a6e-4cd9-b13a-61dec86d6570",
+      "nombre": "Camisa del París Saint-Germán Dorsal 10 Dembele",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416357016_1000015876_bzin0v.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416357016_1000015876_bzin0v.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416358341_1000015840_sopenw.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:39:20.36036+00:00",
+      "actualizado_en": "2026-10-07T23:39:20.36036+00:00"
+    },
+    {
+      "id": "e63f80ab-8f24-420b-8e16-c51526bb3911",
+      "nombre": "Camiseta del Liverpool FC",
+      "descripcion": null,
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416406230_1000015922_mraegb.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416406230_1000015922_mraegb.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791416407189_1000015906_4qlqjs.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-07T23:40:09.241929+00:00",
+      "actualizado_en": "2026-10-07T23:40:09.241929+00:00"
+    },
+    {
+      "id": "1537a772-7ee5-43ca-aa55-dcde5eae848e",
+      "nombre": "Camiseta de Panamá Dorsal 8 Carrasquilla",
+      "descripcion": null,
+      "precio": 40,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942277434_1000016564_nj09oq.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942277434_1000016564_nj09oq.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942278537_1000016549_lh1d6o.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-14T01:44:40.578153+00:00",
+      "actualizado_en": "2026-10-14T01:44:40.578153+00:00"
+    },
+    {
+      "id": "62e90086-0497-40ca-8998-c5b4ea60bb22",
+      "nombre": "Camiseta de Panamá Dorsal 15 Erick Davis",
+      "descripcion": null,
+      "precio": 40,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942330028_1000016564_u8fxp9.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942330028_1000016564_u8fxp9.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942330952_1000016555_0tzk7y.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-14T01:45:32.986993+00:00",
+      "actualizado_en": "2026-10-14T01:45:32.986993+00:00"
+    },
+    {
+      "id": "00bbf950-8b98-49d7-a9a5-1cb2658c167c",
+      "nombre": "Camiseta de Panamá Dorsal 18 Kadir Barría",
+      "descripcion": null,
+      "precio": 40,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942387566_1000016564_4qexee.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942387566_1000016564_4qexee.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942388176_1000016561_cu6dkh.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-14T01:46:29.792293+00:00",
+      "actualizado_en": "2026-10-14T01:46:29.792293+00:00"
+    },
+    {
+      "id": "a0a40e3e-b340-4544-be59-6de62099fb62",
+      "nombre": "Camiseta de Panamá color azul marino",
+      "descripcion": null,
+      "precio": 40,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942430852_1000016547_l753h6.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942430852_1000016547_l753h6.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942431605_1000016552_6cvo17.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-14T01:47:13.26481+00:00",
+      "actualizado_en": "2026-10-14T01:47:13.26481+00:00"
+    },
+    {
+      "id": "2f16760a-2d65-4523-8cd5-40dfbc90524c",
+      "nombre": "Crop to de Brasil",
+      "descripcion": "Tallas\n3 S Brasil amarillo sin nombre con el número 10\n1 S sin nombre y sin número Brasil amarillo\n4 M sin nombre y con el número 10 top amarillo Brasil",
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942847528_1000016631_daa5g8.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942847528_1000016631_daa5g8.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791942850830_1000016635_dalzbb.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-14T01:54:17.186184+00:00",
+      "actualizado_en": "2026-10-14T01:54:27.019+00:00"
+    },
+    {
+      "id": "89ecce25-4227-412a-a415-c7d7cdc9341b",
+      "nombre": "Crop top de Portugal",
+      "descripcion": "3 S sin nombre y con número 7 rojo\n1 M con nombre y con número 7\n1 S con nombre y número de Portugal 7",
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791943022114_1000016692_csnni4.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791943022114_1000016692_csnni4.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791943022768_1000016643_fnc1pv.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-14T01:56:40.753056+00:00",
+      "actualizado_en": "2026-10-14T01:57:03.482+00:00"
+    },
+    {
+      "id": "be7b21f2-35fd-4dc7-9d3b-e87f53293b32",
+      "nombre": "Camiseta de Brasil Amarillo versión jugador",
+      "descripcion": "L - 1 Neymar\nXL - Neymar\n2XL-2 Neymar",
+      "precio": 50,
+      "categoria_id": "46697972-9a74-4356-b292-8d66db46fe33",
+      "imagen_url": "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791943444378_1000016648_pvonth.jpg",
+      "imagenes": [
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791943444378_1000016648_pvonth.jpg",
+        "https://gfkzdakcekvvylzsyexi.supabase.co/storage/v1/object/public/productos/productos/1791943445178_1000016654_h01227.jpg"
+      ],
+      "activo": true,
+      "creado_en": "2026-10-14T02:04:07.211043+00:00",
+      "actualizado_en": "2026-10-14T02:04:07.211043+00:00"
+    }
+  ],
+  "inventario": [
+    {
+      "id": "c246fcd2-2a34-4321-ad03-80dfd8220611",
+      "producto_id": "9d58643a-9eef-48cd-b790-941933ca2fde",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:42.372+00:00"
+    },
+    {
+      "id": "f134edf4-6a49-4e8e-ad61-3639a6a972c5",
+      "producto_id": "1760689e-0949-4b9a-8d21-8c1fed89be7d",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:47.509+00:00"
+    },
+    {
+      "id": "1c5681b0-202e-46db-8070-6c586b858411",
+      "producto_id": "1537a772-7ee5-43ca-aa55-dcde5eae848e",
+      "cantidad": 0,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-14T01:44:40.578153+00:00"
+    },
+    {
+      "id": "1aa14ee2-6995-44e1-a551-1eb86ddb9897",
+      "producto_id": "1f1e0ac9-aed0-4256-b2f3-71a9a9483911",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:29.499+00:00"
+    },
+    {
+      "id": "1707a18c-936e-4681-a5a2-e4de8ddb1735",
+      "producto_id": "b4c38317-f000-439a-8003-e9a832d9fdda",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:29.079+00:00"
+    },
+    {
+      "id": "2fcbf8e5-b5bc-4045-a3d4-db742a630e7f",
+      "producto_id": "c52a1b33-2d91-4aa1-958f-b3945d65e0d6",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:30.049+00:00"
+    },
+    {
+      "id": "41b95742-4713-4078-b4d0-7cb13c9829f0",
+      "producto_id": "19758a53-472a-4767-a277-378f0730976e",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:30.513+00:00"
+    },
+    {
+      "id": "71281e73-c3cd-42d7-ac22-199addd02b2e",
+      "producto_id": "62e90086-0497-40ca-8998-c5b4ea60bb22",
+      "cantidad": 0,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-14T01:45:32.986993+00:00"
+    },
+    {
+      "id": "45011892-5d2a-408d-bec5-5b9560235a4b",
+      "producto_id": "2b665c8e-28fe-4630-a375-e69319193a79",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:32.921+00:00"
+    },
+    {
+      "id": "4ea8e0e8-3289-4645-9cd2-194c983a4428",
+      "producto_id": "dda18850-a4ca-4100-a21c-ba32104b5e81",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:34.074+00:00"
+    },
+    {
+      "id": "4fd0ff17-6e77-49c4-b1f6-852a463e4969",
+      "producto_id": "a8d627f4-0c2c-4dd7-a934-b8fba8656ac9",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:34.488+00:00"
+    },
+    {
+      "id": "9c4b178f-509a-4c56-b232-1a514193185c",
+      "producto_id": "00bbf950-8b98-49d7-a9a5-1cb2658c167c",
+      "cantidad": 0,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-14T01:46:29.792293+00:00"
+    },
+    {
+      "id": "665ea7fc-4af7-454c-96f4-f1b83ffd61be",
+      "producto_id": "897c1242-1a3f-4a45-957b-6dbfa4a9c761",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:36.047+00:00"
+    },
+    {
+      "id": "8c883f19-38ab-4422-aa58-1482e09fa132",
+      "producto_id": "3e0496bd-10a3-4e6b-9490-daac7b148fc3",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:37.533+00:00"
+    },
+    {
+      "id": "739ce521-1697-4d44-a3ce-7d24f1d45a65",
+      "producto_id": "f5b5b2d9-f253-41bb-98d9-8726bc23ae65",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:37.209+00:00"
+    },
+    {
+      "id": "91123725-9f1b-45e2-9ca2-9d29c91e13fd",
+      "producto_id": "b79e6014-f0d8-46bb-8281-5b7a58a71756",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:37.858+00:00"
+    },
+    {
+      "id": "991af618-8a2f-4fb3-8a47-763e3c5768da",
+      "producto_id": "132255d4-f60d-4333-a0b9-994a58dc74fc",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:38.164+00:00"
+    },
+    {
+      "id": "a3c3250e-70b7-479c-a4a2-50b7ddb4894e",
+      "producto_id": "e6eddce9-6e91-421c-9900-144af799eea8",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:43.878+00:00"
+    },
+    {
+      "id": "a7786589-b727-4534-a411-730fdae71aca",
+      "producto_id": "2fd96ae2-4e8d-4198-a273-052578f7f97e",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:44.062+00:00"
+    },
+    {
+      "id": "59a09b13-c0d0-4f78-a91d-c6350de34092",
+      "producto_id": "a0a40e3e-b340-4544-be59-6de62099fb62",
+      "cantidad": 0,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-14T01:47:13.26481+00:00"
+    },
+    {
+      "id": "cd32e57b-a1ed-4fd5-9981-dcb95f70b558",
+      "producto_id": "729857d6-cd98-4cb9-9ba5-b7402b4c30ea",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:52.072+00:00"
+    },
+    {
+      "id": "ed5a6e21-0b96-4bc7-83b9-96f6ec1e4570",
+      "producto_id": "0c7f642f-3237-49b8-a5b6-cf7e06a428a3",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:05:53.621+00:00"
+    },
+    {
+      "id": "1cfb93ff-4651-444e-b00f-4c309b163793",
+      "producto_id": "a8fbb6a9-8d3a-41ec-a771-b7b8d98bdd23",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-02T13:09:05.252+00:00"
+    },
+    {
+      "id": "1a126601-c14d-45ed-91fe-fbc74c6e5030",
+      "producto_id": "9222ad43-0fd7-4f69-ba14-4758622073e1",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:23:57.015+00:00"
+    },
+    {
+      "id": "29370dea-6c59-4499-a1f7-2e078d135b97",
+      "producto_id": "286f69b8-3c45-43aa-9c16-f3fd6d49dcae",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:23:58.051+00:00"
+    },
+    {
+      "id": "4b5095b2-e682-4d24-93e0-8ced787a95be",
+      "producto_id": "a8746955-086e-4c98-b290-5334de82b37f",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:23:59.532+00:00"
+    },
+    {
+      "id": "50c0a478-1c89-44f4-aca9-539678a45550",
+      "producto_id": "62006d0d-4e59-4a30-99f1-13fdfca62e15",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:24:00.218+00:00"
+    },
+    {
+      "id": "a02dd901-c043-48ea-9351-5b8671baacf2",
+      "producto_id": "f32a9723-2ab4-4ab5-9f98-d71570646af5",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:24:01.842+00:00"
+    },
+    {
+      "id": "b3c391d6-84ff-459d-8dc0-73d30e6db03a",
+      "producto_id": "eb96d4ba-f871-49b1-859a-ee030e668f94",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:24:03.081+00:00"
+    },
+    {
+      "id": "cab297d0-9548-494f-ad40-ac6051b5816d",
+      "producto_id": "40c85879-87a7-4903-b5dc-f48ea8fe26ca",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:24:03.423+00:00"
+    },
+    {
+      "id": "f7bfb8a5-b41e-40cd-bb0f-fc2ee7f86ac9",
+      "producto_id": "f2e5d400-5755-449e-8353-6be590c8d499",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:24:11.551+00:00"
+    },
+    {
+      "id": "e67d5ca1-34bc-4e89-9da7-9e6e0d96497f",
+      "producto_id": "85221c3d-1fc7-4974-89d2-e7fc1753cb57",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:24:12.042+00:00"
+    },
+    {
+      "id": "6821ccb0-9d6c-48c1-aa57-2c6a3e9b2daf",
+      "producto_id": "2f16760a-2d65-4523-8cd5-40dfbc90524c",
+      "cantidad": 0,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-14T01:54:27.634+00:00"
+    },
+    {
+      "id": "a481c74d-8fa1-4713-9ef1-ebd81cddfa50",
+      "producto_id": "89ecce25-4227-412a-a415-c7d7cdc9341b",
+      "cantidad": 0,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-14T01:57:03.734+00:00"
+    },
+    {
+      "id": "fca048ce-d6da-460f-9a1f-6e55f9d004e1",
+      "producto_id": "be7b21f2-35fd-4dc7-9d3b-e87f53293b32",
+      "cantidad": 0,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-14T02:04:07.211043+00:00"
+    },
+    {
+      "id": "b733c255-3c19-4e8a-855c-be290067f8a7",
+      "producto_id": "e63f80ab-8f24-420b-8e16-c51526bb3911",
+      "cantidad": 0,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-15T15:40:08.853+00:00"
+    },
+    {
+      "id": "010ae999-6097-4afd-9797-e3f9c6397912",
+      "producto_id": "c5b2a371-6250-4334-b68d-2bb3bdc7ad7e",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-06T22:24:27.155+00:00"
+    },
+    {
+      "id": "b1416c12-adcd-4d67-9a89-bf65c958972f",
+      "producto_id": "b4cd97b1-b94c-4433-892d-f9647c41ab34",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T21:56:01.736+00:00"
+    },
+    {
+      "id": "0273f93d-6555-42ee-9e07-ac1514704f9d",
+      "producto_id": "cfddc339-a8b8-40e6-a764-f93b9da31c17",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:25.19+00:00"
+    },
+    {
+      "id": "08d19d82-aea7-489c-b47a-1aaf8423ac51",
+      "producto_id": "9eedb393-b559-4794-ab6d-23fd67334990",
+      "cantidad": 2,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:26.431+00:00"
+    },
+    {
+      "id": "097be404-76e9-4f35-b5a1-2184845d9e9e",
+      "producto_id": "ebc2d350-09a3-437a-9f94-50189b9ba394",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:26.871+00:00"
+    },
+    {
+      "id": "109d8139-2599-490a-9e4c-ee828de631a1",
+      "producto_id": "ce3da4e4-4255-4708-aa17-3ca40f6f10a9",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:28.136+00:00"
+    },
+    {
+      "id": "11785db1-629a-487a-80c3-a1bff40151ca",
+      "producto_id": "c3cdec9a-eacb-417e-8d90-c8a5fb115769",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:30.248+00:00"
+    },
+    {
+      "id": "1418da3d-bbac-42ec-8905-6f3cf240b256",
+      "producto_id": "2bc46ed0-1a6e-4cd9-b13a-61dec86d6570",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:30.798+00:00"
+    },
+    {
+      "id": "38e7cf22-a271-4003-a871-e1bd70218692",
+      "producto_id": "880af32c-8451-4522-91b2-9e188f058619",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:33.746+00:00"
+    },
+    {
+      "id": "5b34f553-cc0a-49dc-bfb5-12817dff0224",
+      "producto_id": "b1e38894-7338-40a1-ba0f-f367bc20432c",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:36.764+00:00"
+    },
+    {
+      "id": "5cd6b63f-1ce3-4220-9010-81e6a7b780ee",
+      "producto_id": "e9f6ed52-6cd7-4b54-896b-c731d82e0638",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:38.756+00:00"
+    },
+    {
+      "id": "a048628d-a8e5-4cb0-baaf-2196a6509d68",
+      "producto_id": "f7319852-c590-479d-a321-42c90b343e0d",
+      "cantidad": 1,
+      "stock_minimo": 5,
+      "actualizado_en": "2026-10-07T23:40:41.281+00:00"
+    }
+  ],
+  "pedidos": {
+    "code": "PGRST205",
+    "details": null,
+    "hint": null,
+    "message": "Could not find the table 'public.pedidos' in the schema cache"
+  },
+  "ventas": {
+    "code": "PGRST205",
+    "details": null,
+    "hint": null,
+    "message": "Could not find the table 'public.ventas' in the schema cache"
+  }
+}

@@ -17,6 +17,8 @@ import { AdminProductsPage } from './pages/admin/AdminProductsPage';
 import { AdminCategoriesPage } from './pages/admin/AdminCategoriesPage';
 import { AdminInventoryPage } from './pages/admin/AdminInventoryPage';
 import { AdminStorageMetricsPage } from './pages/admin/AdminStorageMetricsPage';
+import { AdminOrdersPage } from './pages/admin/AdminOrdersPage';
+import { AdminSalesPage } from './pages/admin/AdminSalesPage';
 import { AdminTab } from './components/admin/AdminSidebar';
 import { categoriasService } from './services/categoriasService';
 import { productosService } from './services/productosService';
@@ -116,7 +118,15 @@ export default function App() {
       let title = 'Dashboard';
       let subtitle = 'Control general del catálogo, stock y almacenamiento';
 
-      if (currentPath === '/admin/productos') {
+      if (currentPath === '/admin/pedidos') {
+        currentAdminTab = 'pedidos';
+        title = 'Gestión de Pedidos & Comprobantes';
+        subtitle = 'Verifica comprobantes de pago por Yappy y Transferencias, y aprueba compras';
+      } else if (currentPath === '/admin/ventas') {
+        currentAdminTab = 'ventas';
+        title = 'Módulo de Ventas & Facturación';
+        subtitle = 'Ventas web aprobadas y registro de ventas manuales de mostrador';
+      } else if (currentPath === '/admin/productos') {
         currentAdminTab = 'productos';
         title = 'Gestión de Productos';
         subtitle = 'Administra catálogo, precios, fotos e inventario en public.productos';
@@ -140,6 +150,8 @@ export default function App() {
           onSelectTab={(tab) => {
             const routes: Record<AdminTab, string> = {
               dashboard: '/admin',
+              pedidos: '/admin/pedidos',
+              ventas: '/admin/ventas',
               productos: '/admin/productos',
               categorias: '/admin/categorias',
               inventario: '/admin/inventario',
@@ -157,6 +169,8 @@ export default function App() {
               onNavigateTab={(tab) => {
                 const routes: Record<AdminTab, string> = {
                   dashboard: '/admin',
+                  pedidos: '/admin/pedidos',
+                  ventas: '/admin/ventas',
                   productos: '/admin/productos',
                   categorias: '/admin/categorias',
                   inventario: '/admin/inventario',
@@ -167,6 +181,8 @@ export default function App() {
               onOpenNewProduct={handleOpenQuickProduct}
             />
           )}
+          {currentAdminTab === 'pedidos' && <AdminOrdersPage />}
+          {currentAdminTab === 'ventas' && <AdminSalesPage />}
           {currentAdminTab === 'productos' && <AdminProductsPage />}
           {currentAdminTab === 'categorias' && <AdminCategoriesPage />}
           {currentAdminTab === 'inventario' && <AdminInventoryPage />}

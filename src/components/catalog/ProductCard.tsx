@@ -119,8 +119,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ producto, onSelect }) 
             </span>
           </div>
 
-          <span className="text-xs font-bold text-[#c5a059] group-hover:text-[#9e7a33] flex items-center gap-0.5">
-            Pedir <ArrowUpRight className="w-3.5 h-3.5" />
+          <span className="text-xs font-bold text-[#c5a059] group-hover:text-[#9e7a33] flex items-center gap-1">
+            {isOutOfStock ? 'Agotado' : 'Añadir a la bolsa'} <ArrowUpRight className="w-3.5 h-3.5" />
           </span>
         </div>
       </div>

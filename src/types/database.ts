@@ -51,6 +51,66 @@ export function getStockStatus(cantidad: number, stockMinimo: number): StockStat
   return 'DISPONIBLE';
 }
 
+export type MetodoPago = 'yappy' | 'transferencia' | 'tarjeta' | 'efectivo' | 'otro';
+export type EstadoPedido = 'pendiente' | 'comprobante_verificado' | 'aprobado' | 'en_camino' | 'entregado' | 'cancelado';
+
+export interface PedidoItem {
+  producto_id: string | number;
+  nombre: string;
+  precio: number;
+  cantidad: number;
+  subtotal: number;
+  imagen_url?: string | null;
+}
+
+export interface Pedido {
+  id: string;
+  codigo: string;
+  cliente_nombre: string;
+  cliente_telefono: string;
+  cliente_direccion?: string | null;
+  metodo_pago: MetodoPago;
+  comprobante_url?: string | null;
+  total: number;
+  estado: EstadoPedido;
+  items: PedidoItem[];
+  notas?: string | null;
+  creado_en?: string;
+  actualizado_en?: string;
+}
+
+export interface Venta {
+  id: string;
+  codigo: string;
+  pedido_id?: string | null;
+  cliente_nombre: string;
+  cliente_telefono?: string | null;
+  metodo_pago: MetodoPago;
+  total: number;
+  items: PedidoItem[];
+  tipo: 'web' | 'manual';
+  notas?: string | null;
+  creado_en?: string;
+}
+
+export interface PaymentConfig {
+  yappy: {
+    activo: boolean;
+    telefono: string;
+    nombre: string;
+    instrucciones?: string;
+  };
+  transferencia: {
+    activo: boolean;
+    banco: string;
+    tipoCuenta: string;
+    numeroCuenta: string;
+    beneficiario: string;
+    cedulaRuc?: string;
+    instrucciones?: string;
+  };
+}
+
 export interface StorageFileItem {
   name: string;
   id?: string | null;

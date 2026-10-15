@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal } from './Modal';
 import { getSupabaseCredentials, saveSupabaseCredentials } from '../../lib/supabase';
 import { SUPABASE_SCHEMA_SQL } from '../../lib/schemaSql';
-import { Database, Key, Check, Copy, ExternalLink, ShieldCheck, AlertTriangle } from 'lucide-react';
+import { Database, Key, Check, Copy, ExternalLink, ShieldCheck, AlertTriangle, Download } from 'lucide-react';
 import { useToast } from '../../contexts/ToastContext';
 
 interface SupabaseConfigModalProps {
@@ -164,27 +164,37 @@ export const SupabaseConfigModal: React.FC<SupabaseConfigModalProps> = ({ isOpen
               </p>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-xs font-bold uppercase tracking-wider text-stone-700">
                 Script SQL Completo (AlexStore)
               </span>
-              <button
-                type="button"
-                onClick={copySqlScript}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#0c0a08] hover:bg-stone-800 text-[#f7e8c5] border border-[#c5a059]/40 font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs"
-              >
-                {copiedSql ? (
-                  <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    ¡Copiado!
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3.5 h-3.5 text-[#c5a059]" />
-                    Copiar Script SQL
-                  </>
-                )}
-              </button>
+              <div className="flex items-center gap-2">
+                <a
+                  href="/alexstore_full_migration.sql"
+                  download="alexstore_full_migration.sql"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold text-xs uppercase tracking-wider transition-all cursor-pointer border border-stone-300 shadow-xs"
+                >
+                  <Download className="w-3.5 h-3.5 text-stone-600" />
+                  Descargar SQL Completo (.sql)
+                </a>
+                <button
+                  type="button"
+                  onClick={copySqlScript}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#0c0a08] hover:bg-stone-800 text-[#f7e8c5] border border-[#c5a059]/40 font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs"
+                >
+                  {copiedSql ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-emerald-400" />
+                      ¡Copiado!
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5 text-[#c5a059]" />
+                      Copiar Script
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
 
             <div className="relative">
@@ -201,7 +211,7 @@ export const SupabaseConfigModal: React.FC<SupabaseConfigModalProps> = ({ isOpen
                 <li>Ve a tu proyecto en <strong>supabase.com/dashboard</strong>.</li>
                 <li>En el menú lateral izquierdo, haz clic en <strong>SQL Editor</strong>.</li>
                 <li>Haz clic en <strong>New query</strong>, pega el script copiado y pulsa el botón verde <strong>Run</strong>.</li>
-                <li>¡Listo! Tus tablas, permisos para visitantes y artículos iniciales estarán activos.</li>
+                <li>¡Listo! Tus tablas, storage (fotos de productos y comprobantes de pago de clientes) y permisos estarán activos.</li>
               </ol>
             </div>
 

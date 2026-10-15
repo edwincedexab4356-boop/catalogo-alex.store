@@ -16,21 +16,24 @@ export function formatBytes(bytes: number, decimals: number = 2): string {
 
 export const storageService = {
   /**
-   * Valida formato de archivo (JPG, JPEG, PNG, WEBP)
+   * Valida formato de archivo (JPG, JPEG, PNG, WEBP, GIF, PDF)
    */
   validateImageFile(file: File): { valid: boolean; error?: string } {
-    const validTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
-    if (!validTypes.includes(file.type.toLowerCase())) {
+    const validTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg', 'image/gif', 'application/pdf'];
+    const isMimeValid = validTypes.includes(file.type.toLowerCase());
+    const isExtensionValid = Boolean(file.name.match(/\.(jpe?g|png|webp|gif|pdf)$/i));
+    
+    if (!isMimeValid && !isExtensionValid) {
       return {
         valid: false,
-        error: 'Formato inválido. Solo se admiten archivos JPG, JPEG, PNG y WEBP.',
+        error: 'Formato inválido. Se admiten comprobantes e imágenes JPG, JPEG, PNG, WEBP y PDF.',
       };
     }
-    // Limit to 10MB per image
-    if (file.size > 10 * 1024 * 1024) {
+    // Limit to 15MB per file
+    if (file.size > 15 * 1024 * 1024) {
       return {
         valid: false,
-        error: 'La imagen excede el límite máximo recomendado de 10 MB.',
+        error: 'El archivo excede el límite máximo recomendado de 15 MB.',
       };
     }
     return { valid: true };
@@ -38,8 +41,13 @@ export const storageService = {
 
   /**
    * Sube un archivo desde el dispositivo del usuario a Supabase Storage
+   * Permite indicar carpeta y bucket de destino ('productos' o 'comprobantes')
    */
-  async uploadFile(file: File, folder: string = 'productos'): Promise<{ publicUrl: string; path: string }> {
+  async uploadFile(
+    file: File,
+    folder: string = 'productos',
+    targetBucket: string = BUCKET_NAME
+  ): Promise<{ publicUrl: string; path: string }> {
     const validation = this.validateImageFile(file);
     if (!validation.valid) {
       throw new Error(validation.error);
@@ -55,25 +63,41 @@ export const storageService = {
       .substring(0, 30);
     const fileName = `${folder}/${timestamp}_${cleanBaseName}_${randomSuffix}.${ext}`;
 
-    const { error: uploadError } = await supabase.storage
-      .from(BUCKET_NAME)
+    let activeBucket = targetBucket;
+
+    // Intentar subida en el bucket objetivo
+    let { error: uploadError } = await supabase.storage
+      .from(activeBucket)
       .upload(fileName, file, {
         cacheControl: '3600',
         upsert: true,
       });
 
+    // Si falló el bucket personalizado (ej. 'comprobantes' aún no creado), intentar en 'productos'
+    if (uploadError && activeBucket !== BUCKET_NAME) {
+      console.warn(`Aviso al subir en bucket '${activeBucket}', reintentando en '${BUCKET_NAME}':`, uploadError.message);
+      activeBucket = BUCKET_NAME;
+      const retryResult = await supabase.storage
+        .from(activeBucket)
+        .upload(fileName, file, {
+          cacheControl: '3600',
+          upsert: true,
+        });
+      uploadError = retryResult.error;
+    }
+
     if (uploadError) {
       // Provide actionable error details
       if (uploadError.message?.toLowerCase().includes('bucket not found') || (uploadError as any).statusCode === '404') {
         throw new Error(
-          `El bucket '${BUCKET_NAME}' no existe aún en tu Supabase Storage. Créalo como público en Supabase -> Storage -> Create bucket ('productos', Public: ON).`
+          `El bucket '${activeBucket}' no existe aún en tu Supabase Storage. Créalo como público en Supabase -> Storage -> Create bucket ('${activeBucket}', Public: ON).`
         );
       }
       throw uploadError;
     }
 
     const { data: urlData } = supabase.storage
-      .from(BUCKET_NAME)
+      .from(activeBucket)
       .getPublicUrl(fileName);
 
     return {

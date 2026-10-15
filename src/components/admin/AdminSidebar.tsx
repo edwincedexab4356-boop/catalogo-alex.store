@@ -7,13 +7,15 @@ import {
   FolderTree,
   Boxes,
   HardDrive,
+  ShoppingBag,
+  TrendingUp,
   LogOut,
   ExternalLink,
   ShieldCheck,
   X,
 } from 'lucide-react';
 
-export type AdminTab = 'dashboard' | 'productos' | 'categorias' | 'inventario' | 'storage';
+export type AdminTab = 'dashboard' | 'pedidos' | 'ventas' | 'productos' | 'categorias' | 'inventario' | 'storage';
 
 interface AdminSidebarProps {
   currentTab: AdminTab;
@@ -34,6 +36,8 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
 
   const navItems: { id: AdminTab; label: string; icon: React.FC<{ className?: string }> }[] = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { id: 'pedidos', label: 'Pedidos & Comprobantes', icon: ShoppingBag },
+    { id: 'ventas', label: 'Ventas & Facturación', icon: TrendingUp },
     { id: 'productos', label: 'Productos', icon: Package },
     { id: 'categorias', label: 'Categorías', icon: FolderTree },
     { id: 'inventario', label: 'Inventario', icon: Boxes },

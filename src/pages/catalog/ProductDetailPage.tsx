@@ -36,7 +36,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   const [relatedProducts, setRelatedProducts] = useState<Producto[]>([]);
   const [loading, setLoading] = useState(true);
   const [cantidad, setCantidad] = useState(1);
-  const { addToCart, sendSingleProductToWhatsApp, setIsCartOpen } = useCart();
+  const { addToCart, setIsCartOpen } = useCart();
   const { success: toastSuccess } = useToast();
 
   useEffect(() => {
@@ -134,10 +134,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       await navigator.clipboard.writeText(window.location.href);
       toastSuccess('Enlace copiado al portapapeles');
     }
-  };
-
-  const handleDirectWhatsAppOrder = () => {
-    sendSingleProductToWhatsApp(producto, cantidad);
   };
 
   const handleAddToCart = () => {
@@ -267,33 +263,19 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
           {/* Action buttons: WhatsApp Checkout and Add to Cart */}
           <div className="space-y-3 pt-6 border-t border-[#f0eae0]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {/* WhatsApp direct order button */}
-              <button
-                onClick={handleDirectWhatsAppOrder}
-                disabled={isOutOfStock}
-                className={`py-4 px-5 rounded-2xl font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 transition-all shadow-md ${
-                  isOutOfStock
-                    ? 'bg-stone-200 text-stone-500 cursor-not-allowed border-none'
-                    : 'bg-[#25D366] hover:bg-[#20ba59] text-white shadow-emerald-600/20 cursor-pointer transform hover:-translate-y-0.5'
-                }`}
-              >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                {isOutOfStock ? 'Agotado' : 'Pedir por WhatsApp'}
-              </button>
-
+            <div>
               {/* Add to Order Bag button */}
               <button
                 onClick={handleAddToCart}
                 disabled={isOutOfStock}
-                className={`py-4 px-5 rounded-2xl font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 transition-all shadow-xs ${
+                className={`w-full py-4 px-6 rounded-2xl font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 transition-all shadow-md ${
                   isOutOfStock
-                    ? 'bg-stone-100 text-stone-400 cursor-not-allowed border-none'
-                    : 'bg-[#0c0a08] hover:bg-stone-800 text-[#f7e8c5] border border-[#c5a059]/40 hover:border-[#c5a059] cursor-pointer'
+                    ? 'bg-stone-200 text-stone-500 cursor-not-allowed border-none'
+                    : 'bg-[#0c0a08] hover:bg-stone-800 text-[#f7e8c5] border border-[#c5a059]/40 hover:border-[#c5a059] shadow-black/20 cursor-pointer transform hover:-translate-y-0.5'
                 }`}
               >
-                <ShoppingBag className="w-4 h-4 text-[#c5a059]" />
-                Añadir a la Bolsa
+                <ShoppingBag className="w-5 h-5 text-[#c5a059]" />
+                {isOutOfStock ? 'Producto Agotado' : 'Añadir a la Bolsa'}
               </button>
             </div>
 
